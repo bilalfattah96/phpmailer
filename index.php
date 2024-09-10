@@ -10,7 +10,8 @@
 <body>
     <form class="" action="send.php" method="post">
         Email <input type="email" name="email" id="email"> <br>
-        Subject <input type="text" name="subject" id="subject"> <br>
+        <!-- Subject <input type="text" name="subject" id="subject"> <br> -->
+        Name <input type="text" name="name" id="name"> <br>
         Message <input type="text" name="message" id="message"> <br>
 
         <button type="submit" name="send">Send</button>

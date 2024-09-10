@@ -7,6 +7,18 @@ require 'phpmailer/src/PHPMailer.php';
 require 'phpmailer/src/SMTP.php';
 
 if(isset($_POST["send"])){
+    function generateRandomString($length = 6) {
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $charactersLength = strlen($characters);
+        $randomString = '';
+    
+        for ($i = 0; $i < $length; $i++) {
+            $randomString .= $characters[random_int(0, $charactersLength - 1)];
+        }
+    
+        return $randomString;
+    }
+
     $mail = new PHPMailer(true);
 
     $mail->isSMTP();
@@ -26,7 +38,7 @@ if(isset($_POST["send"])){
     $mail->isHTML(true); // Set email format to HTML
     $mail->Subject = $_POST["subject"];
     // $mail->Body = $_POST["message"];
-    $mail->Body =  '<img src="https://marketplace.canva.com/EAFG7-le7Uk/1/0/1131w/canva-green-%26-yellow-modern-colorful-company-newsletter-pSR6NjZ_FI0.jpg"/>';
+    $mail->Body =  generateRandomString();
 
     $mail->send();
     echo '
