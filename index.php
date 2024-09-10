@@ -11,10 +11,10 @@
     <form class="" action="send.php" method="post">
         Email <input type="email" name="email" id="email"> <br>
         <!-- Subject <input type="text" name="subject" id="subject"> <br> -->
-        Name <input type="text" name="name" id="name"> <br>
-        Message <input type="text" name="message" id="message"> <br>
+        <!-- Name <input type="text" name="name" id="name"> <br> -->
+        Register <input type="password" name="pass" id="pass"> <br>
 
-        <button type="submit" name="send">Send</button>
+        <button type="submit" name="send">Register</button>
 
     </form>
 </body>

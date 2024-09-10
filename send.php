@@ -44,7 +44,7 @@ if(isset($_POST["send"])){
     echo '
     <script>
     alert("Email Sent Successfully");
-    document.location.href = "index.php"
+    document.location.href = "verify.php"
     </script>
     ';
 
